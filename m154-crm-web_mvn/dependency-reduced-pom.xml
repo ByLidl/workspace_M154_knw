@@ -53,7 +53,7 @@
           <verbose>true</verbose>
           <images>
             <image>
-              <name>crmwebapp</name>
+              <name>bylidl/crmwebapp</name>
               <build>
                 <dockerFileDir>${project.basedir}</dockerFileDir>
                 <assembly>

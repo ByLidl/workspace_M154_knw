@@ -35,6 +35,12 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.31</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
 			<version>1.8.0-beta4</version>
 		</dependency>
 
@@ -44,7 +50,7 @@
 			<version>3.0.9.RELEASE</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -60,8 +66,7 @@
 						</goals>
 						<configuration>
 							<transformers>
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>ch.ilv.crm.web.CrmApp</mainClass>
 								</transformer>
 							</transformers>
@@ -79,7 +84,7 @@
 					<!--authConfig> <username>TODO (optional): User Name</username> </authConfig -->
 					<images>
 						<image>
-							<name>crmwebapp</name>
+							<name>bylidl/crmwebapp</name>
 							<build>
 								<dockerFileDir>${project.basedir}</dockerFileDir>
 								<assembly>
@@ -119,7 +124,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
+
 		<resources>
 			<resource>
 				<filtering>false</filtering>
